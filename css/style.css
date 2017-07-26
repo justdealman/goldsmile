@@ -256,6 +256,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	display:block;
 	width:238px;
 	height:83px;
+	color:#454545;
 	text-align:center;
 	margin-left:-210px;
 	background:url('../img/logo.png') no-repeat 10px 10px;
