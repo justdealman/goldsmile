@@ -319,6 +319,7 @@ $(function() {
 		closeMobileMenu();
 		$(this).addClass('is-active');
 		var t = $('[data-target="'+$(this).attr('data-open')+'"]');
+		t.siblings('[data-target]').removeClass('is-opened is-active');
 		$('.fade-bg').addClass('is-opened');
 		t.addClass('is-opened');
 		var h = $(window).scrollTop()+($(window).height()-t.outerHeight())/2;

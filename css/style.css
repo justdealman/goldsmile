@@ -1428,8 +1428,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	box-shadow:0 0 8px rgba(0,0,0,0.18);
 	-webkit-transform:translateY(-5px);
 	transform:translateY(-5px);
-	-webkit-transition:all 0.3s ease;
-	transition:all 0.3s ease;
+	-webkit-transition:-webkit-transform 0.3s ease;
+	transition:transform 0.3s ease;
 }
 .modal.is-opened {
 	visibility:visible;
