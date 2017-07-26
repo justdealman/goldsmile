@@ -276,8 +276,6 @@ $(function() {
 	function removeTipMessage() {
 		$('.tip-message').remove();
 	}
-	
-	
 	$('.tip-link').on('click', function() {
 		if ( !$('.tip-message[data="'+$(this).attr('data-id')+'"]').length ) {
 			removeTipMessage();
@@ -305,7 +303,6 @@ $(function() {
 			removeTipMessage();
 		}
 	});
-	
 	$(document).on('click', function(e) {
 		if ( !$(e.target).closest('.header__address').length && !$(e.target).closest('.header--shops').length ) {
 			closeHeaderAddress();
@@ -414,10 +411,10 @@ $(function() {
 		var range = t.find('.filter--range');
 		var inputFrom = t.find('input.from');
 		var inputTo = t.find('input.to');
-		var min = 0;
-		var max  = 50000;
-		var start = 2000;
-		var end = 30000;
+		var min = parseInt(range.attr('data-min'));
+		var max  = parseInt(range.attr('data-max'));
+		var start = min;
+		var end = max;
 		range.slider({
 			range: true,
 			min: min,
