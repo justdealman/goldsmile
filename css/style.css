@@ -750,6 +750,29 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	height:325px;
 	margin:4px 0 -5px 110px;
 }
+.nav-drop__slider:before,
+.nav-drop__slider:after {
+	content:'';
+	position:absolute;
+	top:0;
+	z-index:10;
+	width:10px;
+	height:100%;
+}
+.nav-drop__slider:before {
+	left:0;
+	background:-moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background:-webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background:linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+}
+.nav-drop__slider:after {
+	right:0;background:
+	-moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background:linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}
 .nav-drop__slider .item {
 	display:block;
 	height:325px;
@@ -2593,8 +2616,36 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	border-bottom:1px solid #e8e8e8;
 }
 .card__main {
+	position:relative;
 	max-width:389px;
 	margin:0 auto 20px;
+}
+.card__main:before,
+.card__main:after {
+	content:'';
+	position:absolute;
+	top:0;
+	z-index:10;
+	width:20px;
+	height:100%;
+}
+.card__main:before {
+	left:0;
+	background:-moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background:-webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background:linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+}
+.card__main:after {
+	right:0;background:
+	-moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background:linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}
+.card__main img {
+	width:100%;
+	height:auto;
 }
 .card__preview {
 	position:relative;
@@ -4226,4 +4277,17 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.similar .catalog__grid > li {
 		width:100%;
 	}
+	.zoomContainer {
+		display:none !important;
+	}
+}
+.zoomContainer {
+	z-index:10;
+}
+.zoomLens {
+	border:1px solid rgba(0,0,0,0.2) !important;
+}
+.zoomWindowContainer > div {
+	margin:0 0 0 19px !important;
+	border:1px solid #e8e8e8 !important;
 }

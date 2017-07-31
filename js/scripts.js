@@ -69,7 +69,6 @@ $(function() {
 		arrows: false,
 		dots: false,
 		infinite: true,
-		fade: true,
 		cssEase: 'ease',
 		speed: 300,
 		draggable: false
@@ -404,6 +403,15 @@ $(function() {
 	});
 	$('.card__features h4').on('click', function() {
 		$(this).toggleClass('is-dropped');
+	});
+	$('.zoom-img').on('mouseover', function() {
+		if ( !isMobile ) {
+			$('.zoomContainer').remove();
+			$(this).elevateZoom({
+				zoomWindowWidth: $(this).width(),
+				zoomWindowHeight: $(this).height()
+			});
+		}
 	});
 });
 $(function() {
