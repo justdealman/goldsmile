@@ -386,7 +386,7 @@ $(function() {
 			$(this).parents('.filter--checker').removeClass('is-selected');
 		}
 	});
-	$('.filter-more-link').on('click', function() {
+	$('.filter-more-link[data-expand]').on('click', function() {
 		if ( !$(this).hasClass('is-active') ) {
 			$(this).addClass('is-active').text('Скрыть').siblings('.more').show();
 		} else {

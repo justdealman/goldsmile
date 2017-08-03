@@ -93,7 +93,7 @@
 											<label class="filter--checker"><input type="checkbox">Цепи</label>
 											<label class="filter--checker"><input type="checkbox">Браслеты</label>
 										</div>
-										<span class="filter-more-link">Показать все</span>
+										<span class="filter-more-link" data-expand>Показать все</span>
 									</div>
 								</div>
 							</div>
@@ -119,14 +119,7 @@
 										<label class="filter--checker"><input type="checkbox">Жемчуг</label>
 										<label class="filter--checker"><input type="checkbox">Топаз</label>
 										<label class="filter--checker"><input type="checkbox">Гранат</label>
-										<div class="more">
-										<label class="filter--checker"><input type="checkbox">Бриллиант</label>
-										<label class="filter--checker"><input type="checkbox">Фианит</label>
-										<label class="filter--checker"><input type="checkbox">Жемчуг</label>
-										<label class="filter--checker"><input type="checkbox">Топаз</label>
-										<label class="filter--checker"><input type="checkbox">Гранат</label>
-										</div>
-										<span class="filter-more-link">Показать все</span>
+										<span class="filter-more-link" data-open="stone">Показать все</span>
 									</div>
 								</div>
 							</div>
@@ -565,6 +558,97 @@
 				</ul>
 			</li>
 		</ul>
+	</div>
+	<div class="modal modal_stone" data-target="stone">
+		<span class="modal--close"></span>
+		<h4>Выберите вставку</h4>
+		<div class="modal_stone__row">
+			<div class="modal_stone__col">
+				<h6>Драгоценные камни</h6>
+				<label class="filter--checker"><input type="checkbox">Александрит</label>
+				<label class="filter--checker"><input type="checkbox">Бриллиант</label>
+				<label class="filter--checker"><input type="checkbox">Изумруд</label>
+				<label class="filter--checker"><input type="checkbox">Рубин</label>
+				<label class="filter--checker"><input type="checkbox">Сапфир</label>
+			</div>
+			<div class="modal_stone__col">
+				<h6>Полудрагоценные камни</h6>
+				<label class="filter--checker"><input type="checkbox">Аквамарин</label>
+				<label class="filter--checker"><input type="checkbox">Авантюрин</label>
+				<label class="filter--checker"><input type="checkbox">Аметист</label>
+				<label class="filter--checker"><input type="checkbox">Аметист зеленный</label>
+				<label class="filter--checker"><input type="checkbox">Аметрин</label>
+				<label class="filter--checker"><input type="checkbox">Гранат</label>
+				<label class="filter--checker"><input type="checkbox">Жемчуг</label>
+				<label class="filter--checker"><input type="checkbox">Кварц</label>
+				<label class="filter--checker"><input type="checkbox">Кварц васильковый</label>
+				<label class="filter--checker"><input type="checkbox">Кварц изумрудный</label>
+				<label class="filter--checker"><input type="checkbox">Кварц лимонный</label>
+				<label class="filter--checker"><input type="checkbox">Кварц розовый</label>
+				<label class="filter--checker"><input type="checkbox">Кварц—волосатик</label>
+				<label class="filter--checker"><input type="checkbox">Кристал Сваровски</label>
+				<label class="filter--checker"><input type="checkbox">Кунцит</label>
+				<label class="filter--checker"><input type="checkbox">Лабродорит</label>
+				<label class="filter--checker"><input type="checkbox">Перламутр</label>
+				<label class="filter--checker"><input type="checkbox">Празиолит</label>
+				<label class="filter--checker"><input type="checkbox">Пренит</label>
+				<label class="filter--checker"><input type="checkbox">Раухтопаз</label>
+				<label class="filter--checker"><input type="checkbox">Рубеллит</label>
+				<label class="filter--checker"><input type="checkbox">Родолит</label>
+				<label class="filter--checker"><input type="checkbox">Ситалл</label>
+				<label class="filter--checker"><input type="checkbox">Султанит</label>
+				<label class="filter--checker"><input type="checkbox">Танзанит</label>
+				<label class="filter--checker"><input type="checkbox">Топаз</label>
+				<label class="filter--checker"><input type="checkbox">Топаз Swiss</label>
+				<label class="filter--checker"><input type="checkbox">Топаз Лондон</label>
+				<label class="filter--checker"><input type="checkbox">Тсаворит</label>
+				<label class="filter--checker"><input type="checkbox">Турмалин</label>
+				<label class="filter--checker"><input type="checkbox">Фианит</label>
+				<label class="filter--checker"><input type="checkbox">Хризолит</label>
+				<label class="filter--checker"><input type="checkbox">Хризопраз</label>
+				<label class="filter--checker"><input type="checkbox">Хрусталь</label>
+				<label class="filter--checker"><input type="checkbox">Циркон</label>
+				<label class="filter--checker"><input type="checkbox">Цитрин</label>
+				<label class="filter--checker"><input type="checkbox">Шпинель</label>
+			</div>
+			<div class="modal_stone__col">
+				<h6>Поделочные камни</h6>
+				<label class="filter--checker"><input type="checkbox">Агат</label>
+				<label class="filter--checker"><input type="checkbox">Бирюза</label>
+				<label class="filter--checker"><input type="checkbox">Бычий глаз</label>
+				<label class="filter--checker"><input type="checkbox">Варисцит</label>
+				<label class="filter--checker"><input type="checkbox">Жадеит</label>
+				<label class="filter--checker"><input type="checkbox">Кианит</label>
+				<label class="filter--checker"><input type="checkbox">Коралл</label>
+				<label class="filter--checker"><input type="checkbox">Кошачий глаз</label>
+				<label class="filter--checker"><input type="checkbox">Лунный камень</label>
+				<label class="filter--checker"><input type="checkbox">Малахит</label>
+				<label class="filter--checker"><input type="checkbox">Обсидиан</label>
+				<label class="filter--checker"><input type="checkbox">Оникс</label>
+				<label class="filter--checker"><input type="checkbox">Опал</label>
+				<label class="filter--checker"><input type="checkbox">Пирит</label>
+				<label class="filter--checker"><input type="checkbox">Родохризит</label>
+				<label class="filter--checker"><input type="checkbox">Сердолик</label>
+				<label class="filter--checker"><input type="checkbox">Соклиный глаз</label>
+				<label class="filter--checker"><input type="checkbox">Тигровый глаз</label>
+				<label class="filter--checker"><input type="checkbox">Унакит</label>
+				<label class="filter--checker"><input type="checkbox">Флюорит</label>
+				<label class="filter--checker"><input type="checkbox">Халцедон</label>
+				<label class="filter--checker"><input type="checkbox">Янтарь</label>
+				<label class="filter--checker"><input type="checkbox">Яшма</label>
+			</div>
+			<div class="modal_stone__col">
+				<h6>Разное</h6>
+				<label class="filter--checker"><input type="checkbox">Микс</label>
+				<label class="filter--checker"><input type="checkbox">Муранское стекло</label>
+				<label class="filter--checker"><input type="checkbox">Эмаль</label>
+				<label class="filter--checker"><input type="checkbox">Ювелирное стекло</label>
+			</div>
+		</div>
+		<div class="modal_stone__buttons">
+			<button class="no-border">Сбросить</button>
+			<button>Выбрать</button>
+		</div>
 	</div>
 	<script src="./js/libs.js"></script>
 	<script src="./js/scripts.js"></script>

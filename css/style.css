@@ -1841,6 +1841,87 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .modal_complete .button-standart {
 	margin:34px 0 10px;
 }
+.modal_stone {
+	overflow:hidden;
+	width:940px;
+	color:#282828;
+	padding:0;
+	margin-left:-460px;
+	background:none;
+}
+.modal_stone h4 {
+	color:#ffffff;
+	font-size:20px;
+	line-height:30px;
+	font-weight:300;
+	padding:10px 80px 14px 40px;
+	margin:0;
+	background:#fe8f00;
+}
+.modal_stone .modal--close {
+	background-image:url('../img/modal-close-icon-w.png');
+}
+.modal_stone__row {
+	font-size:0;
+	padding:30px 28px 25px 25px;
+	background:#ffffff;
+}
+.modal_stone__col {
+	display:inline-block;
+	width:25%;
+	font-size:12px;
+	line-height:16px;
+	padding:0 12px 0 15px;
+}
+.modal_stone__col h6 {
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	padding:0;
+	margin:0 0 15px;
+}
+.modal_stone .filter--checker.is-selected {
+	background:#f5f5f5;
+}
+.modal_stone__buttons {
+	text-align:right;
+	padding:20px 40px 22px;
+	background:#ffffff;
+	border-top:1px solid #e8e8e8;
+}
+.modal_stone__buttons button {
+	color:#ffffff;
+	font-size:13px;
+	line-height:16px;
+	font-weight:300;
+	font-family:'Proxima Nova', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	cursor:pointer;
+	padding:8px 19px;
+	margin:0 0 0 11px;
+	background:#fe8f00;
+	border:1px solid #fe8f00;
+	-webkit-border-radius:23px;
+	border-radius:23px;
+	-webkit-transition:all 0.1s ease;
+	transition:all 0.1s ease;
+}
+.modal_stone__buttons button:hover {
+	-webkit-box-shadow:inset 0 -4px 5px rgba(0,0,0,0.12);
+	box-shadow:inset 0 -4px 5px rgba(0,0,0,0.12);
+}
+.modal_stone__buttons button.no-border {
+	color:#fe8f00;
+	background:transparent;
+}
+.modal_stone__buttons button.no-border:hover {
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
 .breadcrumbs {
 	position:relative;
 	z-index:1;
@@ -3731,6 +3812,29 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.modal_complete .button-standart {
 		margin-top:14px;
 	}
+	.modal_stone {
+		left:0;
+		width:100%;
+		margin-left:0;
+	}
+	.modal_stone h4 {
+		padding:10px 45px 14px 15px;
+	}
+	.modal_stone__row {
+		padding:30px 8px 0 5px;
+	}
+	.modal_stone__col {
+		width:50%;
+		padding:0 7px 0 10px;
+		margin:0 0 30px;
+	}
+	.modal_stone__buttons {
+		text-align:center;
+		padding:20px 15px 22px;
+	}
+	.modal_stone__buttons button {
+		margin:0 8px 0 9px;
+	}
 	.menu-drop {
 		position:fixed;
 		left:0;
@@ -4384,6 +4488,11 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.zoomContainer {
 		display:none !important;
+	}
+	.modal_stone__col {
+		width:100%;
+		padding:0 7px 0 10px;
+		margin:0 0 30px;
 	}
 }
 .zoomContainer {
