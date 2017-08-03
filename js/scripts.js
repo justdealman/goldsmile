@@ -153,9 +153,13 @@ $(function() {
 							$('.contacts--select').append('<option value="'+$(this).attr('data')+'" selected>'+$(this).find('h3').text()+'</option>');
 						}
 					});
-					$('.contacts--select').after('<div class="contacts--shop">'+$('.shops--list li[data="'+$('.contacts--select').val()+'"]').html()+'</div>')
+					$('.contacts--select').after('<div class="contacts--shop">'+$('.shops--list li[data="'+$('.contacts--select').val()+'"]').html()+'</div>');
 					$(document).on('change', '.contacts--select', function() {
 						$('.contacts--shop').html($('.shops--list li[data="'+$(this).val()+'"]').html())
+					});
+					$(document).on('click', '.contacts--shop .route a', function(e) {
+						e.preventDefault();
+						$(this).parents('.main').toggleClass('is-dropped');
 					});
 				}
 				if ( $('.filter').length ) {
@@ -210,6 +214,11 @@ $(function() {
 			scrollApi.reinitialise();
 		}
 	}, 100));
+	$('.shops--list .route a').on('click', function(e) {
+		e.preventDefault();
+		$(this).parents('.main').toggleClass('is-dropped');
+		scrollApi.reinitialise();
+	});
 	$('input[type="checkbox"]').uniform();
 	function openHeaderAddress() {
 		$('.header__address').addClass('is-active');

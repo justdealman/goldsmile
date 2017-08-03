@@ -1144,33 +1144,40 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .shops--list {
 	float:left;
-	width:366px;
-	height:442px;
-	margin-right:10px;
+	width:360px;
+	height:556px;
+	margin-right:16px;
 }
 .shops--list ul {
-	margin:-24px 0 0;
+	margin:0;
+}
+.shops--list.jspScrollable ul {
+	width:calc(100% + 10px);
 }
 .shops--list li {
 	position:relative;
-	min-height:143px;
-	padding:24px 0 13px 123px;
 	border-bottom:1px solid #e8e8e8;
 }
+.shops--list li .main {
+	min-height:138px;
+	padding:13px 10px 9px 130px;
+}
 .shops--list li:last-child {
-	min-height:125px;
-	padding-bottom:0;
-	border-bottom-width:0;
+	border-bottom-color:transparent;
 }
 .shops--list li:last-child > *:last-child {
 	margin-bottom:0;
 }
 .shops--list .pic {
 	position:absolute;
-	left:0;
-	top:24px;
+	left:12px;
+	top:19px;
 	width:94px;
 	height:94px;
+	cursor:pointer;
+}
+.shops--list .is-active {
+	background:#f4f4f4;
 }
 .shops--list .is-active .pic:before {
 	content:'';
@@ -1190,34 +1197,36 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }*/
 .shops--list h3 {
 	color:#0a6995;
-	font-size:15px;
-	line-height:24px;
+	font-size:14px;
+	line-height:22px;
+	text-transform:uppercase;
+	cursor:pointer;
 	padding:0;
-	margin:-7px 0 7px;
+	margin:0 0 3px;
 }
 .shops--list p {
+	color:#000000;
+	font-size:13px;
+	line-height:17px;
+	margin:0 0 5px;
+}
+.shops--list p span {
 	color:#5e5e5e;
-	font-size:14px;
-	line-height:18px;
-	margin:0 0 4px;
 }
 .shops--list .route {
 	position:relative;
-	white-space:nowrap;
+	margin:8px 0 5px;
 }
-.shops--list .route:after {
-	content:'';
-	position:absolute;
-	left:0;
-	bottom:0;
-	width:100%;
-	border-bottom:1px solid #feaf67;
-}
-.shops--list .route:hover {
+.shops--list .route a:hover {
 	text-decoration:none;
 }
-.shops--list .route:hover:after {
-	border-bottom-color:transparent;
+.shops--list .drop {
+	display:none;
+	border-top:1px solid #e8e8e8;
+	padding:10px 10px 9px 12px;
+}
+.shops--list .main.is-dropped + .drop {
+	display:block;
 }
 .jspContainer {
 	overflow:hidden;
@@ -1229,7 +1238,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .jspVerticalBar {
 	position:absolute;
 	top:0;
-	left:0;
+	right:-9px;
 	width:12px;
 	height:100%;
 }
@@ -1266,11 +1275,63 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	height:100%;
 	background:#0a0a0a;
 }
-.shops--map {
+.shops__map {
 	float:right;
 	width:794px;
-	height:442px;
+	height:556px;
 	width:calc(100% - 376px);
+}
+.map--info {
+	max-width:325px;
+	padding:14px 0 0 7px;
+	margin:0;
+	background:#ffffff;
+}
+.map--info h3 {
+	color:#282828;
+	font-size:14px;
+	line-height:18px;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 5px;
+}
+.map--info p {
+	color:#000000;
+	font-size:13px;
+	line-height:17px;
+	margin:0 0 5px;
+}
+.map--info p span {
+	color:#5e5e5e;
+}
+.map--info h6 {
+	overflow:hidden;
+	position:relative;
+	color:#fe8f00;
+	font-size:13px;
+	line-height:17px;
+	font-weight:normal;
+	padding:0 0 10px;
+	margin:10px 0 0;
+}
+.map--info h6:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background:#dddddd;
+}
+.map--info h6 span {
+	cursor:pointer;
+}
+.map--info .drop {
+	display:none;
+	margin:6px 0 9px;
+}
+.map--info h6.is-dropped + .drop {
+	display:block;
 }
 .footer-nav {
 	border-top:1px solid #e8e8e8;
@@ -2147,7 +2208,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .contacts .shops--list,
 .contacts .shops__map {
-	height:580px;
+	height:556px;
 }
 .contacts__grid {
 	position:relative;
@@ -3220,7 +3281,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .similar .catalog__grid > li {
 	width:25%;
 }
-
+.contacts--map-m {
+	display:none;
+}
 @media all and (max-width:1230px) {
 	.header--logo {
 		margin-left:-240px;
@@ -3919,24 +3982,29 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.contacts--shop {
 		position:relative;
-		min-height:143px;
-		padding:24px 0 13px 123px;
-		margin:-1px 0 16px;
+		min-height:123px;
+		margin:17px 0 19px;
 		border-bottom:1px solid #e8e8e8;
+	}
+	.contacts--shop .main {
+		position:relative;
+		min-height:131px;
+		padding:0 0 11px 96px;
 	}
 	.contacts--shop .pic {
 		position:absolute;
 		left:0;
-		top:24px;
-		width:94px;
-		height:94px;
+		top:6px;
+		width:80px;
+		height:80px;
 	}
 	.contacts--shop h3 {
 		color:#0a6995;
 		font-size:15px;
-		line-height:24px;
+		line-height:22px;
+		text-transform:uppercase;
 		padding:0;
-		margin:-7px 0 7px;
+		margin:0 0 8px;
 	}
 	.contacts--shop p {
 		color:#5e5e5e;
@@ -3946,33 +4014,29 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.contacts--shop .route {
 		position:relative;
+		font-size:13px;
 		white-space:nowrap;
+		margin:6px 0 4px;
 	}
-	.contacts--shop .route:after {
-		content:'';
-		position:absolute;
-		left:0;
-		bottom:0;
-		width:100%;
-		border-bottom:1px solid #feaf67;
-	}
-	.contacts--shop .route:hover {
+	.contacts--shop .route a:hover {
 		text-decoration:none;
 	}
-	.contacts--shop .route:hover:after {
-		border-bottom-color:transparent;
+	.contacts--shop .drop {
+		display:none;
+		padding:10px 0 9px;
+		border-top:1px solid #e8e8e8;
+	}
+	.contacts--shop .main.is-dropped + .drop {
+		display:block;
+	}
+	.contacts--map-m {
+		display:block;
+		height:290px;
+		margin:0 0 36px;
 	}
 	.contacts__row {
-		margin:0 0 52px;
-	}
-	.contacts__row .shops--list {
 		display:none;
-	}
-	.contacts__row .shops--map {
-		overflow:hidden;
-		float:none;
-		width:auto;
-		height:290px;
+		margin:0 0 52px;
 	}
 	.contacts__grid:before {
 		display:none;
