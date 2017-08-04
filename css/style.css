@@ -1546,6 +1546,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	position:absolute;
 	left:50%;
 	top:50%;
+	height:0;
 	z-index:1010;
 	background:#ffffff;
 	-webkit-border-radius:2px;
@@ -1558,6 +1559,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	transition:transform 0.3s ease;
 }
 .modal.is-opened {
+	display:block;
+	height:auto;
 	visibility:visible;
 	opacity:1;
 	-webkit-transform:translateY(0);
