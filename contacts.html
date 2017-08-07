@@ -403,7 +403,7 @@
 					icon: iconBase,
 					map: map
 				});
-				google.maps.event.addListener(marker, 'click', function() {
+				google.maps.event.addListener(marker, 'mouseover', function() {
 					$('.contacts__row .shops--list li[data="'+shop.id+'"]').addClass('is-active').siblings().removeClass('is-active');
 					if ( infowindow !== null ) {
 						closeInfoWindow();
@@ -421,7 +421,7 @@
 					});
 				});
 				$('.contacts__row .shops--list [data="'+shop.id+'"] h3, .contacts__row .shops--list [data="'+shop.id+'"] .pic').off('click').on('click', function() {
-					new google.maps.event.trigger(marker, 'click');
+					new google.maps.event.trigger(marker, 'mouseover');
 					$(this).parents('li').addClass('is-active').siblings().removeClass('is-active');
 				});
 				google.maps.event.addListener(map, 'click', function() {
