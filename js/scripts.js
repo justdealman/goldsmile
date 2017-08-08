@@ -466,4 +466,12 @@ $(function() {
 			$(this).val(val);
 		});
 	});
+	$('.fancybox').fancybox({
+		padding: 0,
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
 });

@@ -76,9 +76,9 @@
 						<ul>
 							<li data="1">
 								<div class="main">
-									<div class="pic">
+									<a href="./pic/special-4.jpg" class="pic fancybox">
 										<img src="./pic/shop-1.jpg" width="94" height="94" class="img-cover" alt="">
-									</div>
+									</a>
 									<h3>«GoldSmile»</h3>
 									<p><span>Адрес:</span> пр. Ленина, 73</p>
 									<p><span>Режим работы:</span> 10:00 - 20:00</p>
@@ -94,9 +94,9 @@
 							</li>
 							<li data="2">
 								<div class="main">
-									<div class="pic">
+									<a href="./pic/special-4.jpg" class="pic fancybox">
 										<img src="./pic/shop-1.jpg" width="94" height="94" class="img-cover" alt="">
-									</div>
+									</a>
 									<h3>ТРЦ «Пионер»</h3>
 									<p><span>Адрес:</span> пр. Ленина, 102в</p>
 									<p><span>Режим работы:</span> 10:00 - 21:00</p>
@@ -112,9 +112,9 @@
 							</li>
 							<li data="3">
 								<div class="main">
-									<div class="pic">
+									<a href="./pic/special-4.jpg" class="pic fancybox">
 										<img src="./pic/shop-1.jpg" width="94" height="94" class="img-cover" alt="">
-									</div>
+									</a>
 									<h3>«Гипермаркет Алтай»</h3>
 									<p><span>Адрес:</span> пр. Космонавтов, 6в</p>
 									<p><span>Режим работы:</span> 10:00 - 21:00</p>
@@ -130,9 +130,9 @@
 							</li>
 							<li data="4">
 								<div class="main">
-									<div class="pic">
+									<a href="./pic/special-4.jpg" class="pic fancybox">
 										<img src="./pic/shop-1.jpg" width="94" height="94" class="img-cover" alt="">
-									</div>
+									</a>
 									<h3>ТРЦ «Огни»</h3>
 									<p><span>Адрес:</span> ул. А.Петрова, 219б</p>
 									<p><span>Режим работы:</span> 10:00 - 21:00</p>
@@ -420,7 +420,7 @@
 						$('.contacts__row .shops--list li').removeClass('is-active');
 					});
 				});
-				$('.contacts__row .shops--list [data="'+shop.id+'"] h3, .contacts__row .shops--list [data="'+shop.id+'"] .pic').off('click').on('click', function() {
+				$('.contacts__row .shops--list [data="'+shop.id+'"] h3').off('click').on('click', function() {
 					new google.maps.event.trigger(marker, 'mouseover');
 					$(this).parents('li').addClass('is-active').siblings().removeClass('is-active');
 				});
