@@ -3179,6 +3179,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .card__complect--item:last-of-type:after {
 	content:'=';
 }
+.card__complect--item:last-child:after {
+	display:none;
+}
 .card__complect--item .pic {
 	display:block;
 	width:120px;
