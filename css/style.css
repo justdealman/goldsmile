@@ -4431,9 +4431,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 		padding:0 15px;
 	}
 	.card__info {
-		width:calc(100% + 30px);
 		padding:35px 15px 12px 15px;
-		margin:0 0 0 -15px;
+		margin:0;
 	}
 	.card--bonus {
 		position:relative;
