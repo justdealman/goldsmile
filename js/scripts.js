@@ -166,7 +166,7 @@ $(function() {
 					$('.filter__item h3').addClass('is-hidden');
 				}
 				if ( $('.card').length ) {
-					$('.card__title h1').detach().prependTo($('.card__gallery'));
+					$('.card__title h1').detach().prependTo($('.card__lc'));
 				}
 				if ( $('.card__complect').length ) {
 					$('.card__complect').detach().insertAfter($('.card__features'));

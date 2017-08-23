@@ -2703,6 +2703,12 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-box-shadow:1px 4px 6px rgba(0,0,0,0.15);
 	box-shadow:1px 4px 6px rgba(0,0,0,0.15);
 }
+.item-card .labels {
+	position:absolute;
+	left:15px;
+	top:15px;
+	z-index:5;
+}
 .item-card .pic {
 	display:block;
 	height:178px;
@@ -2799,8 +2805,39 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:50%;
 }
 .card__gallery {
+	position:relative;
 	padding:19px 20px 7px 0;
 	border-bottom:1px solid #e8e8e8;
+}
+.card__gallery--labels {
+	position:absolute;
+	left:30px;
+	top:15px;
+	z-index:20;
+}
+.label-new {
+	display:block;
+	width:52px;
+	height:51px;
+	margin:0 auto 10px;
+	background:url('../img/label-new.png') no-repeat 0 0;
+	background-size:52px 51px;
+}
+.label-sale {
+	display:block;
+	width:48px;
+	height:48px;
+	margin:0 auto 10px;
+	background:url('../img/label-sale.png') no-repeat 0 0;
+	background-size:48px 48px;
+}
+.label-hit {
+	display:block;
+	width:50px;
+	height:43px;
+	margin:0 auto 10px;
+	background:url('../img/label-hit.png') no-repeat 0 0;
+	background-size:50px 43px;
 }
 .card__main {
 	position:relative;
@@ -3605,6 +3642,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.item-gift:hover:before {
 		opacity:0;
 	}
+	.card__gallery--labels {
+		left:10px;
+	}
 }
 @media all and (min-width:961px) {
 	.menu-open,
@@ -4378,11 +4418,15 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.card {
 		width:calc(100% + 30px);
 		padding:15px;
-		margin:-32px 0 -15px -15px;
+		margin:-13px 0 -15px -15px;
 		border-width:0;
 	}
 	.card h1 {
-		margin:0 0 15px;
+		margin:0 0 -4px;
+	}
+	.card__gallery--labels {
+		left:15px;
+		top:20px;
 	}
 	.card:before {
 		display:none;
