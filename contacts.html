@@ -412,7 +412,7 @@
 						content: shop.content
 					});
 					infowindow.open(map, marker);
-					$(document).off('click').on('click', '.contacts__row .map--info h6 span', function() {
+					$(document).off('click', '.contacts__row .map--info h6 span').on('click', '.contacts__row .map--info h6 span', function() {
 						$(this).parent().toggleClass('is-dropped');
 						infowindow.open(map, marker);
 					});
