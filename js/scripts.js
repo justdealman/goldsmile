@@ -120,6 +120,60 @@ $(function() {
 			}
 		});
 	}
+	function dataGrid() {
+		$('[data-grid]').each(function() {
+			var t = $(this);
+			var size = t.children('li').size();
+			var inline;
+			if ( $(this).attr('data-grid') == '3' ) {
+				if ( Modernizr.mq('(min-width:1230px)') ) {
+					inline = 3;
+				} else if ( Modernizr.mq('(max-width:1230px)') && ( Modernizr.mq('(min-width:641px)') ) ) {
+					inline = 2;
+				} else if ( Modernizr.mq('(max-width:640px)') ) {
+					inline = 0
+				}
+			}
+			if ( $(this).attr('data-grid') == '4' ) {
+				if ( Modernizr.mq('(min-width:1231px)') ) {
+					inline = 4;
+				}
+				if ( Modernizr.mq('(max-width:1230px)') && Modernizr.mq('(min-width:961px)') ) {
+					inline = 3;
+				} else if ( Modernizr.mq('(max-width:960px)') && ( Modernizr.mq('(min-width:641px)') ) ) {
+					inline = 2;
+				} else if ( ( Modernizr.mq('(max-width:640px)') ) ) {
+					inline = 0
+				}
+			}
+			var lines = Math.ceil(size/inline);
+			t.children('li').css({
+				'height': 'auto',
+				'min-height': '0'
+			}).find('.item-card').css({
+				'height': 'auto',
+				'min-height': '0'
+			});
+			if ( inline !== 0 ) {
+				for ( var i=0; i<lines; i++ ) {
+					var max = 0;
+					for ( var j=1; j<=inline; j++ ) {
+						var n = i*inline+j;
+						var h = t.children('li:nth-child('+n+')').find('.item-card').outerHeight();
+						max = h > max ? h : max;
+					}
+					for ( var j=1; j<=inline; j++ ) {
+						var n = i*inline+j;
+						t.children('li:nth-child('+n+')').css({
+							'min-height': max
+						}).find('.item-card').css({
+							'height': max
+						});
+					}
+				}
+			}
+		});
+	}
 	function startApp() {
 		setPicRatio();
 		detectDevice();
@@ -201,6 +255,7 @@ $(function() {
 			removeTipMessage();
 			switchText();
 		}
+		dataGrid();
 	}
 	startApp();
 	if ( $('.shops--list').length ) {
