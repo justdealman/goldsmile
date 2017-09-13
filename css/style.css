@@ -866,6 +866,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .introduction .item {
 	position:relative;
 }
+.introduction .pic {
+	height:500px;
+}
 .introduction .info {
 	position:absolute;
 	left:7.6%;
@@ -1014,6 +1017,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:#f6f5ef;
 }
 .collections__item .pic {
+	height:247px;
 	-webkit-transform-origin:75% 75%;
 	transform-origin:75% 75%;
 	-webkit-transition:-webkit-transform 2s ease;
@@ -1086,6 +1090,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	font-size:18px;
 	line-height:24px;
 	margin:0 0 5px;
+}
+.special__item .pic {
+	height:375px;
 }
 .special__item .link {
 	position:relative;
@@ -2028,12 +2035,18 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0 11px;
 	margin:0 0 22px;
 }
+.news__grid .pic {
+	height:244px;
+}
 .news__grid_magazine {
 	padding:5px 0 0;
 	margin-bottom:20px;
 }
 .news__grid_magazine > li {
 	width:50%;
+}
+.news__grid_magazine .pic {
+	height:306px;
 }
 .news__grid_magazine .item-new .info {
 	min-height:119px;
@@ -2229,6 +2242,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .article__other .news__grid > li,
 .article__group .news__grid > li {
 	width:50%;
+}
+.article__other .news__grid .pic,
+.article__group .news__grid .pic {
+	height:241px;
 }
 .article__rc h2 {
 	color:#0a6995;
@@ -2864,6 +2881,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:100%;
 	height:auto;
 }
+.card__main .pic {
+	height:389px;
+}
 .card__preview {
 	position:relative;
 	width:493px;
@@ -2917,6 +2937,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .card__preview .pic {
 	position:relative;
 	width:110px;
+	height:110px;
 	cursor:pointer;
 }
 .card__preview .active .pic:before {
@@ -3402,6 +3423,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .gifts--intro .pic {
 	position:relative;
+	height:400px;
 }
 .gifts--intro h2 {
 	position:absolute;
