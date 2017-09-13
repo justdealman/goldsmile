@@ -149,10 +149,10 @@ $(function() {
 			var lines = Math.ceil(size/inline);
 			t.children('li').css({
 				'height': 'auto',
-				'min-height': '0'
+				'min-height': '100%'
 			}).find('.item-card').css({
 				'height': 'auto',
-				'min-height': '0'
+				'min-height': '100%'
 			});
 			if ( inline !== 0 ) {
 				for ( var i=0; i<lines; i++ ) {
