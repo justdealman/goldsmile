@@ -1,10 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>GoldSmile</title>
+	<title>Dorra Brava</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
-	<link href="./favicon.ico" rel="shortcut icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,48 +34,33 @@
 					<input type="text" placeholder="Поиск">
 					<input type="submit" value="">
 				</div>
-				<div class="header--logo">
-					<div class="animation">
-						<div class="flipper">
-							<i class="smile"></i>
-							<i class="diamond"></i>
-						</div>
-					</div>
-					<span class="title">магазин ювелирных украшений</span>
+				<div class="header__logo">
+					<i class="header__logo--icon"></i>
+					<span class="header__logo--title">ювелирная бижутерия</span>
 				</div>
-				<span class="header--slogan">Дарите<br> с улыбкой!</span>
-				<button class="header--shops"><span>Адреса магазинов</span></button>
-				<button class="header--bonus">Ваши бонусы</button>
-				<div class="header__address">
-					<span class="close"></span>
-					<ul>
-						<li><a href="#">«GoldSmile», пр. Ленина, 73</a></li>
-						<li><a href="#">ТЦ «Алтай», пр. Космонавтов, 6в</a></li>
-						<li><a href="#">ТРЦ «Пионер», пр. Ленина, 102в</a></li>
-						<li><a href="#">ТРЦ «Огни», ул. А. Петрова,219б</a></li>
-					</ul>
-					<h6><a href="#">Посмотреть на карте</a></h6>
-				</div>
-				<div class="header__card">
-					<span class="close"></span>
-					<div class="header__card--item">
-						<label>Номер бонусной карты</label>
-						<input type="text">
+				<div class="header-rc">
+					<div class="header-rc__item">
+						<a href="#" class="header-rc--icon header-rc--icon_favorite"><span>2</span></a>
 					</div>
-					<button class="button-standart">Проверить баллы</button>
-					<h6><a href="#">О бонусной<br> программе</a></h6>
+					<div class="header-rc__item">
+						<a href="#" class="header-rc--icon header-rc--icon_basket"><span>4</span></a>
+					</div>
+					<div class="header-rc__item">
+						<i href="#" class="header-rc--icon header-rc--icon_person"></i>
+						<ul class="header-rc__list">
+							<li><a href="#">Войти</a></li>
+							<li><a href="#">Регистрация</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<nav class="nav">
 				<ul class="nav__line">
 					<li class="nav__catalog"><a href="#" class="nav__catalog--item">Каталог</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Кольца</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Серьги</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Подвески</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Цепи</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Еще украшения</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Идеи подарков</a></li>
-					<li class="nav--item"><a href="#" class="nav--link">Журнал</a></li>
+					<li class="nav--item"><a href="#" class="nav--link">Украшения</a></li>
+					<li class="nav--item"><a href="#" class="nav--link">Бренды</a></li>
+					<li class="nav--item"><a href="#" class="nav--link">Доставка и оплата</a></li>
+					<li class="nav--item"><a href="#" class="nav--link">Lookbook</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -185,72 +186,34 @@
 		</div>
 		<div class="footer-nav">
 			<div class="footer-nav__row">
-				<div class="footer-nav__main">
-					<h3 class="footer-nav--title">О компании</h3>
-					<div class="footer-nav--list">
-						<p><a href="#">Услуги покупателям</a></p>
-						<p><a href="#">Бонусная программа</a></p>
-						<p><a href="#">Новости</a></p>
-						<p><a href="#">Контакты</a></p>
-						<p><a href="#">Вакансии</a></p>
-						<p><a href="#">О GoldSmile</a></p>
-					</div>
+				<div class="footer-nav__links">
+					<a href="#">Каталог</a>
+					<a href="#">Бренды</a>
+					<a href="#">Доставка и оплата</a>
+					<a href="#">Условия возврата</a>
+					<a href="#">Договор оферты</a>
+					<a href="#">Контакты</a>
+					<a href="#">Новости</a>
+					<a href="#">О нас</a>
 				</div>
-				<div class="footer-nav__catalog">
-					<h3 class="footer-nav--title">Каталог</h3>
-					<div class="footer-nav--list">
-						<ul>
-							<li>
-								<p><a href="#">Коллекции</a></p>
-								<p><a href="#">Хиты продаж</a></p>
-								<p><a href="#">Sale</a></p>
-								<p><a href="#">Новинки</a></p>
-							</li>
-							<li>
-								<p><a href="#">Бижутерия</a></p>
-								<p><a href="#">Браслеты</a></p>
-								<p><a href="#">Броши</a></p>
-								<p><a href="#">Булавки</a></p>
-								<p><a href="#">Бусы</a></p>
-								<p><a href="#">Детское</a></p>
-							</li>
-							<li>
-								<p><a href="#">Заколки</a></p>
-								<p><a href="#">Колье</a></p>
-								<p><a href="#">Кольца</a></p>
-								<p><a href="#">Мужское</a></p>
-								<p><a href="#">Пирсинг</a></p>
-								<p><a href="#">Подвески</a></p>
-							</li>
-							<li>
-								<p><a href="#">Религиозное</a></p>
-								<p><a href="#">Серьги</a></p>
-								<p><a href="#">Столовое серебро</a></p>
-								<p><a href="#">Цепи</a></p>
-								<p><a href="#">Часы</a></p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-nav__social">
-					<h3 class="footer-nav--title">Узнавай о скидках первым!</h3>
-					<div class="footer-nav__form">
-						<input type="text">
-						<input type="submit" value="Подписаться">
-					</div>
-					<ul>
-						<li><a href="#"><img src="./img/vk-icon.png" width="24" height="14" alt=""></a></li>
-						<li><a href="#"><img src="./img/ok-icon.png" width="16" height="24" alt=""></a></li>
-						<li><a href="#"><img src="./img/in-icon.png" width="24" height="24" alt=""></a></li>
-					</ul>
-				</div>
+				<a href="tel:+79818155719" class="footer-nav--phone">+7 981 815 57-19</a>
+				<ul class="footer-nav__social">
+					<li class="footer-nav__social--item">
+						<a href="#" class="footer-nav__social--link footer-nav__social--link_vkontakte"></a>
+					</li>
+					<li class="footer-nav__social--item">
+						<a href="#" class="footer-nav__social--link footer-nav__social--link_instagram"></a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="footer-clear"></div>
 	</div>
 	<footer class="footer">
-		<p class="copy">© 2017 <span>GoldSmile</span></p>
-		<p class="author">Разработка сайта <a href="http://letsrock.pro" target="_blank"><img src="./img/letsrock-logo.png" width="119" height="26" alt=""></a></p>
+		<div class="footer__row">
+			<p class="footer--copy">© 2018 <span>Dorra Brava</span></p>
+			<p class="footer--author">Разработка сайта – <a href="http://letsrock.pro" target="_blank"><img src="./img/letsrock-logo.png" width="103" height="22" alt=""></a></p>
+		</div>
 	</footer>
 	<button class="ask-button" data-open="ask"><span>Задать вопрос</span></button>
 	<span class="menu-open"></span>

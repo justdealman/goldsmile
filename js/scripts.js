@@ -20,7 +20,7 @@ function setImgContain(e) {
 }
 function setPicRatio() {
 	$('[data-ratio]').each(function() {
-		var t = $(this).find('.pic');
+		var t = $(this).find('.scale');
 		t.height(t.width()*$(this).attr('data-ratio'));
 	});
 }
@@ -73,6 +73,49 @@ $(function() {
 		speed: 300,
 		draggable: false
 	});
+	function setRecommend(e) {
+		var conts = e.find('.recommend__item');
+		var elems = conts.find('.item-card');
+		conts.outerHeight('auto');
+		elems.outerHeight('auto');
+		var max = 0;
+		elems.each(function() {
+			var h = $(this).outerHeight(); 
+			max = h > max ? h : max;
+		});
+		conts.outerHeight(max+100);
+		elems.outerHeight(max);
+		console.log('!');
+	}
+	$('.recommend__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		infinite: true,
+		cssEase: 'ease',
+		speed: 300,
+		draggable: false,
+		responsive: [
+			{
+				breakpoint: 1231,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 961,
+				settings: {
+					slidesToShow: 3,
+					draggable: true
+				}
+			}
+		]
+	});
+	setRecommend($('.recommend__slider'));
+	/*$('.recommend__slider').on('afterChange', function(event, slick, currentSlide) {
+		setRecommend($('.recommend__slider'));
+	});*/
 	$('.card__preview').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -172,7 +215,7 @@ $(function() {
 					}
 				}
 			}
-		});
+		}).addClass('is-visible');
 	}
 	function startApp() {
 		setPicRatio();
@@ -484,10 +527,10 @@ $(function() {
 		var range = t.find('.filter--range');
 		var inputFrom = t.find('input.from');
 		var inputTo = t.find('input.to');
-		var min = parseInt(range.attr('data-min'));
-		var max  = parseInt(range.attr('data-max'));
-		var start = min;
-		var end = max;
+		var min   = parseInt(range.attr('data-min'));
+		var max   = parseInt(range.attr('data-max'));
+		var start = parseInt(range.attr('data-start'));
+		var end   = parseInt(range.attr('data-end'));
 		range.slider({
 			range: true,
 			min: min,
@@ -528,5 +571,19 @@ $(function() {
 				locked: false
 			}
 		}
+	});
+	$(document).on('click', '.quantity-e--button_minus', function(e) {
+		e.preventDefault();
+		var $input = $(this).parent().find('.quantity-e--input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+	});
+	$(document).on('click', '.quantity-e--button_plus', function(e) {
+		e.preventDefault();
+		var $input = $(this).parent().find('.quantity-e--input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
 	});
 });
