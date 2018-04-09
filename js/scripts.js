@@ -586,4 +586,21 @@ $(function() {
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
 	});
+	function setTab(e) {
+		var p = e.parents('[data-tab-group]');
+		var tabs = p.find('[data-tab-item]');
+		var links = p.find('[data-tab-link]');
+		tabs.hide().filter('[data-tab-item="'+e.attr('data-tab-link')+'"]').show();
+		links.removeClass('is-active').filter(e).addClass('is-active');
+	}
+	setTab($('[data-tab-link].is-active'));
+	$('[data-tab-link]').on('click', function(e) {
+		e.preventDefault();
+		setTab($(this));
+	});
+	$('.order-payment--title span').on('click', function(e) {
+		e.preventDefault();
+		var t = $(this).parents('.order-payment--title');
+		t.toggleClass('is-active');
+	});
 });

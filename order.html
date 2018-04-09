@@ -67,154 +67,155 @@
 		<div class="content">
 			<ul class="breadcrumbs">
 				<li><a href="#" class="home-icon"></a></li>
-				<li>Корзина</li>
+				<li>Оформление заказа</li>
 			</ul>
-			<h1>Корзина</h1>
-			<div class="basket">
-				<table class="basket__table">
-					<thead>
-						<tr>
-							<th class="basket__table--th basket__table--th_photo"></th>
-							<th class="basket__table--th basket__table--th_title">Название</th>
-							<th class="basket__table--th basket__table--th_material">Материал и вставка</th>
-							<th class="basket__table--th basket__table--th_size">Размер</th>
-							<th class="basket__table--th basket__table--th_quantity">Количество</th>
-							<th class="basket__table--th basket__table--th_price">Стоимость</th>
-							<th class="basket__table--th basket__table--th_remove"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="basket__table--td">
-								<a href="#" class="basket__table--photo">
-									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
-								</a>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Обручальное кольцо из серебра с фианитом</p>
-									<span class="basket__table--code">Артикул 6015003</span>
+			<h1>Оформление заказа</h1>
+			<div class="order">
+				<div class="order__row">
+					<div class="order__col">
+						<div class="order__list">
+							<table class="order__table">
+								<tbody>
+									<tr>
+										<td class="order__table--td order__table--td_photo">
+											<div class="order__table--photo">
+												<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt=""></span>
+											</div>
+										</td>
+										<td class="order__table--td">
+											<span class="order__table--title"><a href="#">Обручальное кольцо из серебра с фианитом</a></span>
+											<p><span>Артикул:</span> 6015003</p>
+											<p><span>Материал и вставка:</span> Серебро 925, фианит</p>
+											<p><span>Размер:</span> 16,5</p>
+											<p><span>Количество:</span> 1</p>
+										</td>
+										<td class="order__table--td order__table--td_price">
+											<span class="order__table--price">13 990 р.</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="order__table--td order__table--td_photo">
+											<div class="order__table--photo">
+												<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt=""></span>
+											</div>
+										</td>
+										<td class="order__table--td">
+											<span class="order__table--title"><a href="#">Кольцо-трансформер из серебра с эмалью с фианитом</a></span>
+											<p><span>Артикул:</span> 6015003</p>
+											<p><span>Материал и вставка:</span> Серебро 925, фианит</p>
+											<p><span>Размер:</span> 16,5</p>
+											<p><span>Количество:</span> 1</p>
+										</td>
+										<td class="order__table--td order__table--td_price">
+											<span class="order__table--price">8 990 р.</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="order__table--td order__table--td_photo">
+											<div class="order__table--photo">
+												<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt=""></span>
+											</div>
+										</td>
+										<td class="order__table--td">
+											<span class="order__table--title"><a href="#">Наборное кольцо из серебра с фианитами</a></span>
+											<p><span>Артикул:</span> 6015003</p>
+											<p><span>Материал и вставка:</span> Серебро 925, фианит</p>
+											<p><span>Размер:</span> 16,5</p>
+											<p><span>Количество:</span> 1</p>
+										</td>
+										<td class="order__table--td order__table--td_price">
+											<span class="order__table--price">4 990 р.</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<span class="order__list--total">Итого <span>27 970 р.</span></span>
+						</div>
+					</div>
+					<div class="order__col">
+						<div class="order__group" data-tab-group>
+							<span class="order__group--title">Контактные данные</span>
+							<ul class="order__group__nav">
+								<li><a href="#" data-tab-link="1" class="is-active">Новый покупатель</a></li>
+								<li><a href="#" data-tab-link="2">Авторизация</a></li>
+							</ul>
+							<div class="form-e" data-tab-item="1">
+								<div class="form-e__item">
+									<input type="text" placeholder="Имя *">
+									<span class="form-e__item--message">Заполните поле</span>
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Серебро 925, фианит</p>
+								<div class="form-e__item">
+									<input type="text" placeholder="Телефон *">
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>16,5т</p>
+								<div class="form-e__item">
+									<input type="text" placeholder="Фамилия *">
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<div class="quantity-e">
-										<span class="quantity-e--button quantity-e--button_minus">–</span>
-										<input type="text" class="quantity-e--input" value="1">
-										<span class="quantity-e--button quantity-e--button_plus">+</span>
+								<div class="form-e__item">
+									<input type="text" placeholder="Эл. почта *">
+								</div>
+								<div class="form-e__item">
+									<input type="text" placeholder="Отчество">
+								</div>
+								<div class="form-e__item">
+									<select>
+										<option selected disabled>Время для звонка</option>
+										<option>10:00 - 15:00</option>
+										<option>15:00 - 20:00</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-e" data-tab-item="2">
+								<div class="form-e__item">
+									<input type="text" placeholder="Логин *">
+								</div>
+								<div class="form-e__item">
+									<input type="text" placeholder="Пароль *">
+								</div>
+								<button class="button-standart form-e--login">Войти</button>
+								<span class="form-e--recover"><a href="#">Забыли пароль?</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order__row">
+					<div class="order__col">
+						<div class="order__group">
+							<span class="order__group--title">Выберите способ оплаты</span>
+							<div class="order-payment">
+								<div class="order-payment__group">
+									<span class="order-payment--title is-active"><span>Оплата при получении наличными</span></span>
+									<div class="order-payment__content">
+										<p>Вы можете оплатить свой заказ наличными при доставке курьером и в пунктах самовывоза.</p>
 									</div>
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--price">13 990 р.</span>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--remove">Удалить</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="basket__table--td">
-								<a href="#" class="basket__table--photo">
-									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
-								</a>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Кольцо-трансформер из серебра с эмалью с фианитом</p>
-									<span class="basket__table--code">Артикул 6015003</span>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Серебро 925, фианит</p>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>16,5т</p>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<div class="quantity-e">
-										<span class="quantity-e--button quantity-e--button_minus">–</span>
-										<input type="text" class="quantity-e--input" value="1">
-										<span class="quantity-e--button quantity-e--button_plus">+</span>
+								<div class="order-payment__group">
+									<span class="order-payment--title"><span>Оплата при получении картой</span></span>
+									<div class="order-payment__content">
+										<p>Вы можете оплатить свой заказ наличными при доставке курьером и в пунктах самовывоза.</p>
 									</div>
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--price">8 990 р.</span>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--remove">Удалить</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="basket__table--td">
-								<a href="#" class="basket__table--photo">
-									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
-								</a>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Наборное кольцо из серебра с фианитами</p>
-									<span class="basket__table--code">Артикул 6015003</span>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>Серебро 925, фианит</p>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<p>16,5т</p>
-								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<div class="quantity-e">
-										<span class="quantity-e--button quantity-e--button_minus">–</span>
-										<input type="text" class="quantity-e--input" value="1">
-										<span class="quantity-e--button quantity-e--button_plus">+</span>
+								<div class="order-payment__group">
+									<span class="order-payment--title"><span>Онлайн-оплата картой</span></span>
+									<div class="order-payment__content">
+										<p>Вы можете оплатить свой заказ наличными при доставке курьером и в пунктах самовывоза.</p>
 									</div>
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--price">4 990 р.</span>
+							</div>
+						</div>
+					</div>
+					<div class="order__col">
+						<div class="order__group">
+							<span class="order__group--title">Комментарий к заказу</span>
+							<div class="form-e">
+								<div class="form-e__item form-e__item_wide">
+									<textarea rows="10" placeholder="Сообщение"></textarea>
 								</div>
-							</td>
-							<td class="basket__table--td">
-								<div class="basket__table__content">
-									<span class="basket__table--remove">Удалить</span>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="basket__total">
-					<span class="basket__total--price">Итого <span>27 970 р.</span></span>
-					<button class="button-standart basket__total--button">Оформить заказ</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order__confirm">
+					<button class="button-standart order__confirm_button">Оформить заказ</button>
 				</div>
 			</div>
 		</div>
