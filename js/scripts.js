@@ -85,7 +85,6 @@ $(function() {
 		});
 		conts.outerHeight(max+100);
 		elems.outerHeight(max);
-		console.log('!');
 	}
 	$('.recommend__slider').slick({
 		slidesToShow: 4,
