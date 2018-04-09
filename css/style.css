@@ -2012,61 +2012,26 @@ div.radio input {
 	right:0;
 	top:0;
 	display:block;
-	width:61px;
+	width:39px;
 	height:43px;
 	cursor:pointer;
-	background:url('../img/modal-close-icon.png') no-repeat 24px 15px;
+	background:url('../img/modal-close-icon.png') no-repeat 13px 15px;
 	background-size:13px 13px;
 }
 .modal_ask {
-	width:544px;
-	padding:42px 60px 30px 58px;
-	margin-left:-272px;
-	background:#f5f5f5;
+	width:600px;
+	padding:45px 52px 28px 58px;
+	margin-left:-300px;
 }
 .modal_ask h3 {
-	color:#262626;
-	font-size:18px;
-	line-height:24px;
-	font-weight:normal;
-	font-family:'Proxima Nova', sans-serif;
-	text-transform:uppercase;
+	color:#28302e;
+	font-size:28px;
+	line-height:32px;
+	font-weight:300;
+	font-family:'Museo', serif;
 	letter-spacing:1px;
 	padding:0;
-	margin:0 0 37px;
-}
-.modal__form {
-	clear:both;
-	overflow:hidden;
-	width:calc(100% + 26px);
-}
-.modal__form--item {
-	float:left;
-	width:100%;
-	padding:0 26px 0 0;
-	margin:0 0 21px;
-}
-.modal__form--item_col {
-	width:50%;
-}
-.modal__form--item label {
-	display:block;
-	color:#6e6e6e;
-	font-size:14px;
-	line-height:18px;
-	margin:0 0 11px;
-}
-.modal__form--item input,
-.modal__form--item textarea {
-	width:100%;
-	color:#6e6e6e;
-	font-size:14px;
-	padding:8px 9px;
-	background:#ffffff;
-	border:1px solid #e8e8e8;
-}
-.modal__form--item textarea {
-	resize:vertical;
+	margin:0 0 36px;
 }
 .button-standart {
 	display:inline-block;
@@ -2077,7 +2042,7 @@ div.radio input {
 	font-family:'Museo', sans-serif;
 	text-transform:uppercase;
 	cursor:pointer;
-	padding:15px 30px;
+	padding:16px 29px 14px;
 	margin:0 0 20px;
 	background:#90e2d2;
 	-webkit-box-shadow:0 9px 14px rgba(0,0,0,0.12);
@@ -2096,6 +2061,9 @@ div.radio input {
 .button-standart_no-shadow:hover {
 	-webkit-box-shadow:inset 0 -7px 18px rgba(0,0,0,0.1);
 	box-shadow:inset 0 -7px 18px rgba(0,0,0,0.1);
+}
+.modal .button-standart {
+	letter-spacing:1px;
 }
 .modal_size {
 	width:720px;
@@ -2126,17 +2094,19 @@ div.radio input {
 	font-size:14px;
 	line-height:22px;
 	font-weight:300;
-	padding-left:37px;
+	padding-left:24px;
 	margin:0 0 6px;
 }
 .modal_size ul li:before {
 	content:'';
 	position:absolute;
 	left:0;
-	top:2px;
-	width:20px;
-	height:20px;
-	background:url('../img/smile-icon.png') no-repeat 0 0;
+	top:7px;
+	width:8px;
+	height:8px;
+	border:2px solid #5fd2bc;
+	-webkit-border-radius:50%;
+	border-radius:50%;
 }
 .modal_availability {
 	width:470px;
@@ -2169,10 +2139,10 @@ div.radio input {
 	border-bottom-width:0;
 }
 .modal_availability a {
-	color:#0a6995;
+	color:#454545;
 }
 .modal_availability a:hover {
-	color:#fe8f00;
+	color:#05a687;
 	text-decoration:none;
 }
 .modal_availability .check-icon {
@@ -2259,24 +2229,24 @@ div.radio input {
 	border-bottom-color:transparent;
 }
 .modal_complete {
-	width:576px;
+	width:526px;
 	color:#6e6e6e;
 	text-align:center;
-	padding:56px 40px 44px;
-	margin-left:-288px;
-	background:#f5f5f5;
+	padding:57px 60px 48px;
+	margin-left:-263px;
 }
 .modal_complete h4 {
+	display:block;
 	font-size:20px;
-	line-height:30px;
-	font-weight:300;
+	line-height:28px;
+	font-weight:normal;
 	padding:0;
-	margin:0 0 5px;
+	margin:0 0 6px;
 }
 .modal_complete p {
 	font-size:16px;
 	line-height:28px;
-	margin:0 0 10px;
+	margin:0 0 6px;
 }
 .modal_complete .button-standart {
 	margin:34px 0 10px;
@@ -2294,12 +2264,10 @@ div.radio input {
 	font-size:20px;
 	line-height:30px;
 	font-weight:300;
-	padding:10px 80px 14px 40px;
+	font-family:'Museo', serif;
+	padding:12px 80px 12px 40px;
 	margin:0;
 	background:#90e2d2;
-}
-.modal_stone .modal--close {
-	background-image:url('../img/modal-close-icon-w.png');
 }
 .modal_stone__row {
 	font-size:0;
@@ -4335,7 +4303,7 @@ a.button:hover {
 	height:26px;
 	color:#636363;
 	font-size:23px;
-	line-height:19px;
+	line-height:18px;
 	text-align:center;
 	cursor:pointer;
 	border:1px solid #a5e9dc;
@@ -4344,6 +4312,9 @@ a.button:hover {
     -webkit-user-select:none;
     -moz-user-select:none;
 	user-select:none;
+}
+.quantity-e--button:hover {
+	border-color:#5ed0ba;
 }
 .quantity-e--button_minus {
 	left:0;

@@ -34,10 +34,10 @@
 					<input type="text" placeholder="Поиск">
 					<input type="submit" value="">
 				</div>
-				<div class="header__logo">
+				<a href="#" class="header__logo">
 					<i class="header__logo--icon"></i>
 					<span class="header__logo--title">ювелирная бижутерия</span>
-				</div>
+				</a>
 				<div class="header-rc">
 					<div class="header-rc__item">
 						<a href="#" class="header-rc--icon header-rc--icon_favorite"><span>2</span></a>
@@ -543,20 +543,18 @@
 	<div class="modal modal_ask" data-target="ask">
 		<span class="modal--close"></span>
 		<h3>Задать вопрос</h3>
-		<div class="modal__form">
-			<div class="modal__form--item modal__form--item_col">
-				<label>Как к вам обращаться?</label>
-				<input type="text">
+		<div class="form-e">
+			<div class="form-e__item">
+				<input type="text" placeholder="Как к вам обращаться?">
+				<span class="form-e__item--message">Заполните поле</span>
 			</div>
-			<div class="modal__form--item modal__form--item_col">
-				<label>E-mail для связи</label>
-				<input type="text">
+			<div class="form-e__item">
+				<input type="text" placeholder="E-mail для связи">
 			</div>
-			<div class="modal__form--item">
-				<label>Ваш вопрос</label>
-				<textarea rows="6"></textarea>
+			<div class="form-e__item form-e__item_wide">
+				<textarea rows="7" placeholder="Ваш вопрос"></textarea>
 			</div>
-			<button class="button-standart">Отправить</button>
+			<button class="button-standart modal_ask_button">Отправить</button>
 		</div>
 	</div>
 	<div class="menu-drop">
