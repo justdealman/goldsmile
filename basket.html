@@ -71,7 +71,7 @@
 			</ul>
 			<h1>Корзина</h1>
 			<div class="basket">
-				<table class="basket__table">
+				<table class="basket__table" data-tablet-grid>
 					<thead>
 						<tr>
 							<th class="basket__table--th basket__table--th_photo"></th>
@@ -84,30 +84,33 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr data-tablet-item>
 							<td class="basket__table--td">
 								<a href="#" class="basket__table--photo">
 									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
 								</a>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_about">
 									<p>Обручальное кольцо из серебра с фианитом</p>
 									<span class="basket__table--code">Артикул 6015003</span>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Материал<br> и вставка</span>
 									<p>Серебро 925, фианит</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Размер</span>
 									<p>16,5т</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_quantity">
+									<span class="basket__table--label">Количество</span>
 									<div class="quantity-e">
 										<span class="quantity-e--button quantity-e--button_minus">–</span>
 										<input type="text" class="quantity-e--input" value="1">
@@ -121,35 +124,38 @@
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_remove">
 									<span class="basket__table--remove">Удалить</span>
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr data-tablet-item>
 							<td class="basket__table--td">
 								<a href="#" class="basket__table--photo">
 									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
 								</a>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_about">
 									<p>Кольцо-трансформер из серебра с эмалью с фианитом</p>
 									<span class="basket__table--code">Артикул 6015003</span>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Материал<br> и вставка</span>
 									<p>Серебро 925, фианит</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Размер</span>
 									<p>16,5т</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_quantity">
+									<span class="basket__table--label">Количество</span>
 									<div class="quantity-e">
 										<span class="quantity-e--button quantity-e--button_minus">–</span>
 										<input type="text" class="quantity-e--input" value="1">
@@ -163,35 +169,38 @@
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_remove">
 									<span class="basket__table--remove">Удалить</span>
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr data-tablet-item>
 							<td class="basket__table--td">
 								<a href="#" class="basket__table--photo">
 									<span><img src="./pic/item-1.jpg" width="204" height="204" class="img-contain" alt="">
 								</a>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_about">
 									<p>Наборное кольцо из серебра с фианитами</p>
 									<span class="basket__table--code">Артикул 6015003</span>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Материал<br> и вставка</span>
 									<p>Серебро 925, фианит</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
 								<div class="basket__table__content">
+									<span class="basket__table--label">Размер</span>
 									<p>16,5т</p>
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_quantity">
+									<span class="basket__table--label">Количество</span>
 									<div class="quantity-e">
 										<span class="quantity-e--button quantity-e--button_minus">–</span>
 										<input type="text" class="quantity-e--input" value="1">
@@ -205,7 +214,7 @@
 								</div>
 							</td>
 							<td class="basket__table--td">
-								<div class="basket__table__content">
+								<div class="basket__table__content basket__table__content_remove">
 									<span class="basket__table--remove">Удалить</span>
 								</div>
 							</td>
@@ -250,7 +259,7 @@
 		</div>
 	</footer>
 	<button class="ask-button" data-open="ask"><span>Задать вопрос</span></button>
-	<span class="menu-open"></span>
+	<span class="menu-open"><i></i></span>
 	<div class="fade-bg"></div>
 	<div class="modal modal_ask" data-target="ask">
 		<span class="modal--close"></span>
@@ -270,18 +279,14 @@
 		</div>
 	</div>
 	<div class="menu-drop">
-		<button class="menu-drop--ask" data-open="ask">Задать вопрос</button>
 		<div class="menu-drop--search">
 			<input type="text" placeholder="Поиск">
 			<input type="submit" value="">
 		</div>
+		<button class="menu-drop--ask" data-open="ask">Задать вопрос</button>
 		<ul class="menu-drop--nav">
-			<li><a href="#" class="item">Кольца</a></li>
-			<li><a href="#" class="item">Серьги</a></li>
-			<li><a href="#" class="item">Подвески</a></li>
-			<li><a href="#" class="item">Цепи</a></li>
 			<li>
-				<a href="#" class="item has-sub">Еще украшения</a>
+				<a href="#" class="item has-sub">Каталог</a>
 				<ul class="subnav">
 					<li><a href="#">Религиозное</a></li>
 					<li><a href="#">Серьги</a></li>
@@ -290,19 +295,10 @@
 					<li><a href="#">Часы</a></li>
 				</ul>
 			</li>
-			<li><a href="#" class="item item_special">Идеи подарков</a></li>
-			<li><a href="#" class="item">Журнал</a></li>
-			<li>
-				<a href="#" class="item has-sub">О компании</a>
-				<ul class="subnav">
-					<li><a href="#">Услуги покупателям</a></li>
-					<li><a href="#">Бонусная программа</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Вакансии</a></li>
-					<li><a href="#">О Goldsmile</a></li>
-				</ul>
-			</li>
+			<li><a href="#" class="item">Украшения</a></li>
+			<li><a href="#" class="item">Бренды</a></li>
+			<li><a href="#" class="item">Доставка и оплата</a></li>
+			<li><a href="#" class="item">Lookbook</a></li>
 		</ul>
 	</div>
 	<script src="./js/libs.js"></script>
