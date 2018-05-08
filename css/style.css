@@ -1392,8 +1392,9 @@ div.radio input {
 	width:calc(100% + 1px);
 }
 .recommend__item .item-card:hover {
-	-webkit-box-shadow:none;
-	box-shadow:none;
+	z-index:5;
+	/*-webkit-box-shadow:none;
+	box-shadow:none;*/
 }
 .follow {
 	overflow:hidden;
