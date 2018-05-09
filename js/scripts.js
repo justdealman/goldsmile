@@ -670,4 +670,23 @@ $(function() {
 		var t = $(this).parents('.order-payment--title');
 		t.toggleClass('is-active');
 	});
+	$(window).on('scroll', function() {
+		$('[data-animated]').each(function() {
+			var t = $(this);
+			if ( $(document).scrollTop() > t.offset().top-$(window).height() && !t.hasClass('is-animated') ) {
+				if ( $(this).is('[data-delay]') ) {
+					var delay = 300+parseInt($(this).attr('data-delay'));
+				} else {
+					var delay = 300;
+				}
+				setTimeout(function() {
+					t.addClass('is-animated');
+				}, delay);
+			}
+		});
+	});
+	$(window).trigger('scroll');
+	setTimeout(function() {
+		$('body').addClass('is-loaded');
+	}, 500);
 });
