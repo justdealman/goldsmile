@@ -1498,6 +1498,23 @@ div.radio input {
 	background-color:#7f7f7f;
 	border:1px solid #ffffff;
 }
+.item-follow--bg {
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#000000;
+}
+.item-follow--parallax {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	min-height:100%;
+	opacity:0.69;
+}
 .item-follow_more {
 	border-width:0;
 }
@@ -5062,6 +5079,21 @@ a.button:hover {
 		width:calc(100% + 30px);
 		height:calc(100% + 30px);
 	}
+	.follow {
+		padding-bottom:20px;
+	}
+	.follow__grid {
+		position:relative;
+		z-index:1;
+		font-size:0;
+		padding:0 20px;
+	}
+	.follow__item {
+		display:inline-block;
+		width:16.66%;
+		padding:0 10px;
+		margin:0 0 20px;
+	}
 	.subscribe--title {
 		width:43%;
 		font-size:22px;
@@ -5554,6 +5586,40 @@ a.button:hover {
 	}
 	.item-card a.button {
 		display:inline-block;
+	}
+	.follow {
+		width:calc(100% + 30px);
+		padding:37px 0 4px;
+		margin:0 0 51px -15px;
+	}
+	.follow--title {
+		font-size:22px;
+		line-height:28px;
+		padding:0 36px;
+		margin:0 0 26px;
+	}
+	.follow--title span {
+		padding:0;
+	}
+	.follow--title span:after {
+		display:none;
+	}
+	.follow__grid {
+		overflow-x:scroll;
+		text-align:center;
+		white-space:nowrap;
+		padding:0 24px;
+	}
+	.follow__grid::-webkit-scrollbar {
+		display:none;
+	}
+	.follow__item {
+		width:187px;
+		padding:0 16px;
+		margin:0 0 32px;
+	}
+	.item-follow {
+		white-space:normal;
 	}
 	.subscribe {
 		padding:22px 24px 68px;

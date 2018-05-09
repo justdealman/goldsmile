@@ -670,6 +670,9 @@ $(function() {
 		var t = $(this).parents('.order-payment--title');
 		t.toggleClass('is-active');
 	});
+	if ( $('.follow').length ) {
+		$('.item-follow--parallax').height($('.follow').width()/$('.item-follow--parallax img').attr('width')*$('.item-follow--parallax img').attr('height'));
+	}
 	$(window).on('scroll', function() {
 		$('[data-animated]').each(function() {
 			var t = $(this);
@@ -684,6 +687,23 @@ $(function() {
 				}, delay);
 			}
 		});
+		$('.follow').each(function() {
+			var parallax = $('.item-follow--parallax');
+			if ( $(document).scrollTop() > $('.follow').offset().top-$(window).height() && $(document).scrollTop() < $('.follow').offset().top+$('.follow').outerHeight() ) {
+				var start = $('.follow').offset().top-$(window).height();
+				var end = $('.follow').offset().top+$('.follow').outerHeight();
+				var progress = 1-(($(document).scrollTop()-start)/(end-start));
+			} else if ( $(document).scrollTop() <= $('.follow').offset().top-$(window).height() ) {
+				var progress = 1;
+			} else if ( $(document).scrollTop() >= $('.follow').offset().top+$('.follow').outerHeight() ) {
+				var progress = 0;
+			}
+			var shift = $('.item-follow--parallax').outerHeight()-$('.item-follow--bg').outerHeight();
+			$('.item-follow--parallax').css({
+				'-webkit-transform': 'translateY(-'+shift*progress+'px)',
+				'transform': 'translateY(-'+shift*progress+'px)'
+			});
+		})
 	});
 	$(window).trigger('scroll');
 	setTimeout(function() {
