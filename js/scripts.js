@@ -281,6 +281,12 @@ $(function() {
 			}
 		});
 	}
+	function setContacts() {
+		if ( !isMobile ) {
+			$('.contacts-main--pic').width($('.contacts-main').offset().left+$('.contacts-main').outerWidth()-parseInt($('.contacts-main--pic').css('right')));
+			$('.contacts--img').width($(window).width()-$('.contacts--img').offset().left);
+		}
+	}
 	function startApp() {
 		setPicRatio();
 		detectDevice();
@@ -329,6 +335,11 @@ $(function() {
 				if ( $('.card').length ) {
 					$('.card__title h1').detach().prependTo($('.card__lc'));
 				}
+				if ( $('.about__grid').length ) {
+					$('.about__item').each(function() {
+						$(this).find('.about__pic').detach().insertBefore($(this).find('.about__content'));
+					});
+				}
 			} else {
 				if ( $('.about--event').length ) {
 					$('.about__rc').detach().insertAfter($('.about__lc'));
@@ -351,6 +362,11 @@ $(function() {
 				if ( $('.card').length ) {
 					$('.card__gallery h1').detach().prependTo($('.card__title'));
 				}
+				if ( $('.about__grid').length ) {
+					$('.about__item').each(function() {
+						$(this).find('[data="1"]').detach().insertBefore($(this).find('[data="2"]'));
+					});
+				}
 				closeMobileMenu();
 			}
 			removeTipMessage();
@@ -365,6 +381,9 @@ $(function() {
 		}
 		if ( $('[data-tablet-grid]').length ) {
 			setTabletItems();
+		}
+		if ( $('.contacts').length ) {
+			setContacts();
 		}
 	}
 	startApp();
